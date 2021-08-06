@@ -672,6 +672,24 @@ header.header-show {
 .message-item-last {
   margin-bottom: 20px; }
 
+.btns-var-tooth label {
+  margin-right: 0;
+  margin-bottom: 10px; }
+
+.btns-var-tooth span b {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 132%;
+  color: #364665; }
+
+.btns-var-tooth span p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 132%;
+  color: #364665;
+  margin-bottom: 0; }
+
 /* 
     M O B I L E
 */

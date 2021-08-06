@@ -83,7 +83,7 @@
                         </div>
                     </div>
 
-                    <div class="services" data-delay="5200" id="step-1">
+                    <div class="services messag-elem" data-delay="5200" id="step-1">
                         <label class="services-item">
                             <input type="radio" name="services-check" value="Имплантация">
                             <img src="img/ico-1.svg" alt="">
@@ -146,54 +146,263 @@
                         </label>
                     </div>
 
-                    <div class="message-item message-y js-message--check-car">
+                    <div class="message-item message-y js-step-1">
                         <div class="message-info">
                             <div class="name">Вы</div>
                             <div class="message-text"></div>
                         </div>
                     </div>
 
-
-                    <div class="message-item message-m js-money-check" id="step-1">
+                    <div class="message-item messag-elem message-m js-problem-check" id="step-2">
                         <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                         <div class="message-info">
                             <div class="name">Анастасия</div>
                             <div class="message-text">Какая у вас ситуация?</div>
                             <div class="btns">
                                 <label>
-                                    <input type="radio" name="money-input" value="Зуб расшатывается (приобрёл подвижность)">
+                                    <input type="radio" name="problem-input" value="Зуб расшатывается (приобрёл подвижность)">
                                     <span>Зуб расшатывается (приобрёл подвижность)</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="money-input" value="Есть отсутствующий зуб / зубы?">
+                                    <input type="radio" name="problem-input" value="Есть отсутствующий зуб / зубы?">
                                     <span>Есть отсутствующий зуб / зубы?</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="money-input" value="Уже ставил коронку / коронки, хочу заменить">
+                                    <input type="radio" name="problem-input" value="Уже ставил коронку / коронки, хочу заменить">
                                     <span>Уже ставил коронку / коронки, хочу заменить</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="money-input" value="Сейчас съёмный протез, хочется коронки">
+                                    <input type="radio" name="problem-input" value="Сейчас съёмный протез, хочется коронки">
                                     <span>Сейчас съёмный протез, хочется коронки</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="money-input" value="Есть имплант нужна коронка">
+                                    <input type="radio" name="problem-input" value="Есть имплант нужна коронка">
                                     <span>Есть имплант нужна коронка</span>
                                 </label>
                                 <label>
-                                    <input type="radio" name="money-input" value="Другое">
+                                    <input type="radio" name="problem-input" value="Другое">
                                     <span>Другое</span>
                                 </label>
                             </div>
                         </div>
                     </div>
-                    <div class="message-item message-y js-message--check-money">
+
+                    <div class="message-item message-y js-problem-check-answear">
                         <div class="message-info">
                             <div class="name">Вы</div>
                             <div class="message-text"></div>
                         </div>
                     </div>
-                    <div class="message-item message-m js-final-message">
+
+                    <div class="message-item messag-elem message-m js-tooth-col" id="step-3">
+                        <div class="avatar"><img src="img/manager.jpg" alt=""></div>
+                        <div class="message-info">
+                            <div class="name">Анастасия</div>
+                            <div class="message-text">Сколько зубов вы хотите восстановить?</div>
+                            <div class="btns">
+                                <label>
+                                    <input type="radio" name="tooth-col" value="1">
+                                    <span>1</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="2">
+                                    <span>2</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="3">
+                                    <span>3</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="4">
+                                    <span>4</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="5">
+                                    <span>5</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="6">
+                                    <span>6</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="7">
+                                    <span>7</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="8">
+                                    <span>8</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="9">
+                                    <span>9</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="Более 10">
+                                    <span>Более 10</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="Всю челюсть">
+                                    <span>Всю челюсть</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-col" value="Обе челюсти">
+                                    <span>Обе челюсти</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message-item message-y js-tooth-col-answear">
+                        <div class="message-info">
+                            <div class="name">Вы</div>
+                            <div class="message-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="message-item messag-elem message-m js-tooth-var">
+                        <div class="avatar"><img src="img/manager.jpg" alt=""></div>
+                        <div class="message-info">
+                            <div class="name">Анастасия</div>
+                            <div class="message-text">Какие зубы необходимо восстановить?</div>
+                            <div class="btns btns-var-tooth">
+                                <label>
+                                    <input type="radio" name="tooth-var" value="Передние - В этом случае люди предпочитают более эстетичные материалы: диоксид циркония и коронки цельнокерамические">
+                                    <span>
+                                        <b>Передние</b>
+                                        <p>В этом случае люди предпочитают более эстетичные материалы: диоксид циркония и коронки цельнокерамические</p>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-var" value="Жевательные - Могут быть использованы все варианты протезирования, в том числе металлокерамика">
+                                    <span>
+                                        <b>Жевательные</b>
+                                        <p>Могут быть использованы все варианты протезирования, в том числе металлокерамика</p>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tooth-var" value="И то, и другое - Материалы в этом случае важно подбирать при консультации с доктором">
+                                    <span>
+                                        <b>И то, и другое</b>
+                                        <p>Материалы в этом случае важно подбирать при консультации с доктором</p>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="message-item message-y js-tooth-var-answear">
+                        <div class="message-info">
+                            <div class="name">Вы</div>
+                            <div class="message-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="message-item messag-elem message-m js-type-treatment">
+                        <div class="avatar"><img src="img/manager.jpg" alt=""></div>
+                        <div class="message-info">
+                            <div class="name">Анастасия</div>
+                            <div class="message-text">Какие зубы необходимо восстановить?</div>
+                            <div class="btns btns-var-tooth">
+                                <label>
+                                    <input type="radio" name="type-treatment" value="Имплантация зубов">
+                                    <span>
+                                        <b>Имплантация зубов</b>
+                                        <p>Наиболее современный и надежный способ восстановления зубов, проверенный временем, при котором не обтачиваются соседние зубы</p>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="type-treatment" value="Одномоментная имплантация">
+                                    <span>
+                                        <b>Одномоментная имплантация</b>
+                                        <p>Позволяет в одно посещение восстановить отсутствующий зуб. Позволяет произвести удаление зуба и сразу сделать имплантацию в один визит</p>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="type-treatment" value="All-on-4/All-on-6">
+                                    <span>
+                                        <b>All-on-4/All-on-6</b>
+                                        <p>Оптимальный способ восстановления, когда требуется восстановление зубов на всей челюсти. Для этого вместо 10-14 имплантатов достаточно всего 4-6</p>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="type-treatment" value="Мост">
+                                    <span>
+                                        <b>Мост</b>
+                                        <p>Более дешевый способ, который широко применялся в 90-е годы, при котором обтачиваются соседние зубы</p>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="type-treatment" value="Съемный протез">
+                                    <span>
+                                        <b>Съемный протез</b>
+                                        <p>Самый бюджетный и не очень комфортный вариант. Возможны трудности при пережевывании твердой пищи. Однако гораздо лучше, чем отсутствие зубов</p>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="type-treatment" value="Консультация">
+                                    <span>
+                                        <b>Консультация</b>
+                                        <p>Предпочитаю посоветоваться с доктором и подробнее узнать о каждом варианте перед выбором</p>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message-item message-y js-type-treatment-answear">
+                        <div class="message-info">
+                            <div class="name">Вы</div>
+                            <div class="message-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="message-item messag-elem message-m js-time-therapy">
+                        <div class="avatar"><img src="img/manager.jpg" alt=""></div>
+                        <div class="message-info">
+                            <div class="name">Анастасия</div>
+                            <div class="message-text">Когда планируете начать лечение?</div>
+                            <div class="btns btns-var-tooth">
+                                <label>
+                                    <input type="radio" name="time-therapy" value="Как можно быстрее">
+                                    <span>
+                                        <b>Как можно быстрее</b>
+                                        <p>Правильный выбор! Для тех, кто быстро принимает решение мы подготовили специальные бонусы, которые помогут вам сэкономить</p>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="time-therapy" value="В ближайшие 2 недели">
+                                    <span>
+                                        <b>В ближайшие 2 недели</b>
+                                        <p>Часто люди откладывают имплантацию по причине нехватки денег и времени. Однако сейчас есть доступные варианты в рассрочку</p>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="time-therapy" value="В ближайшие месяцы">
+                                    <span>
+                                        <b>В ближайшие месяцы</b>
+                                        <p>Каждый месяц откладывания может вести к увеличению стоимости из-за смещения зубов рядом с отсутствующим</p>
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="time-therapy" value="Через полгода и позже">
+                                    <span>
+                                        <b>Через полгода и позже</b>
+                                        <p>Высока вероятность, что потребуется проведение синус-лифтинга от 10 до 30 тыс. руб и более. А также возможно расшатывание и потеря соседних зубов</p>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message-item message-y js-time-therapy-answear">
+                        <div class="message-info">
+                            <div class="name">Вы</div>
+                            <div class="message-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="message-item messag-elem message-m js-final-message">
                         <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                         <div class="message-info">
                             <div class="name">Анастасия</div>
@@ -208,17 +417,19 @@
                             </div>
                         </div>
                     </div>
+
+
+
                 </div>
             </div>
+
+            <footer class="footer">
+                <div class="container"></div>
+            </footer>
         </div>
 
-        <footer class="footer">
-            <div class="container"></div>
-        </footer>
-    </div>
-
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.js"></script>
+        <script src="js/vendor.min.js"></script>
+        <script src="js/main.js"></script>
 </body>
 
 </html>

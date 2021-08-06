@@ -610,6 +610,29 @@ header.header-show {
     margin-bottom: 20px;
 }
 
+.btns-var-tooth {
+    label {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    span {
+        b {
+            display: block;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 132%;
+            color: #364665;
+        }
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 132%;
+            color: #364665;
+            margin-bottom: 0;
+        }
+    }
+}
+
 
 /* 
     M O B I L E

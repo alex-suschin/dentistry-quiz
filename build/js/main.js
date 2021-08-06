@@ -63,44 +63,44 @@ $(function() {
 
     $('.services-item').click(function() {
         // var newmessBlockH = $('.message-box').outerHeight();
-        // var messCarH = $('.js-message--check-car').outerHeight();
+        // var messCarH = $('.js-step-1').outerHeight();
         // $(".message-box").css('height', newmessBlockH + messCarH);
 
         flag = false;
-        $('.js-money-check').removeClass('vis');
-        $('.js-money-check').removeClass('visF');
+        $('.js-problem-check').removeClass('vis');
+        $('.js-problem-check').removeClass('visF');
         $('.js-final-message').removeClass('vis');
         $('.js-final-message').removeClass('visF');
-        $('.js-message--check-money').removeClass('vis');
-        $('.js-message--check-money').removeClass('visF');
+        $('.js-problem-check-answear').removeClass('vis');
+        $('.js-problem-check-answear').removeClass('visF');
         $('.btns label').removeClass('active');
         var valueCar = $(this).children('input:checked').val();
-        $('.js-message--check-car').addClass('vis');
-        $('.js-message--check-car .message-text').text(valueCar);
+        $('.js-step-1').addClass('vis');
+        $('.js-step-1 .message-text').text(valueCar);
 
 
         setTimeout(() => {
-            $('.js-message--check-car').addClass('visF');
+            $('.js-step-1').addClass('visF');
         }, 100);
 
         setTimeout(() => {
-            $('html,body').animate({ scrollTop: $('.js-message--check-car').offset().top + "px" }, { duration: 1E3 });
+            $('html,body').animate({ scrollTop: $('.js-step-1').offset().top + "px" }, { duration: 1E3 });
         }, 150);
 
 
 
         setTimeout(() => {
             if ($('.text-print').length == 0) {
-                $('.js-message--check-car').after('<div class="text-print text-car-check">Виктор печатает ...</div>');
+                $('.js-step-1').after('<div class="text-print text-car-check">Виктор печатает ...</div>');
             }
         }, 200);
 
         setTimeout(() => {
-            $('.js-money-check').addClass('visF');
+            $('.js-problem-check').addClass('visF');
         }, 300);
 
         setTimeout(() => {
-            $('.js-money-check').addClass('vis');
+            $('.js-problem-check').addClass('vis');
             $('.text-car-check').remove();
         }, 1200);
 
@@ -112,57 +112,60 @@ $(function() {
         $(this).addClass('active');
     });
 
-    $('.btns label').click(function() {
+    $('.btns').each(function() {
+        $(this).children('label').click(function() {
+            var elemThis = $(this).closest('.message-item-m');
+            var idVal = $(this).closest('.message-item-m').attr('id');
+            console.log(idVal);
+            $('.js-final-message').removeClass('vis');
+            $('.js-final-message').removeClass('visF');
+            $(this).siblings('label').removeClass('active');
+            $(this).addClass('active');
 
-        $('.js-final-message').removeClass('vis');
-        $('.js-final-message').removeClass('visF');
-        $('.btns label').removeClass('active');
-        $(this).addClass('active');
-
-        var valueMoney = $(this).children('input:checked').val();
-        $('.js-message--check-money').addClass('vis');
-        $('.js-message--check-money .message-text').text(valueMoney);
-
-
-
-        setTimeout(() => {
-            $('.js-message--check-money').addClass('visF');
-        }, 300);
-
-        setTimeout(() => {
-            $('html,body').animate({ scrollTop: $('.js-message--check-money').offset().top + "px" }, { duration: 1E3 });
-        }, 400);
-
-        setTimeout(() => {
-            if ($('.text-print').length == 0) {
-                $('.js-message--check-money').after('<div class="text-print text-money-check">Виктор печатает ...</div>');
-            }
-        }, 600);
-
-        setTimeout(() => {
-            $('.js-money-check').addClass('vis');
-            $('.text-money-check').remove();
-        }, 1600);
-
-        // setTimeout(() => {
-        //     if ($('.text-print').length == 0) {
-        //         $('.js-message--check-money').after('<div class="text-print text-final">Виктор печатает ...</div>');
-        //     }
-        // }, 1500);
-
-        setTimeout(() => {
-            $('.js-final-message').addClass('visF');
-        }, 1600);
-
-        setTimeout(() => {
-            $('.js-final-message').addClass('vis');
-            $('.text-final').remove();
-        }, 1700);
+            var valueMoney = $(this).children('input:checked').val();
+            console.log(valueMoney);
+            $(this).closest('.messag-elem').next('.message-y').addClass('vis');
+            $(this).closest('.messag-elem').next('.message-y').find('.message-text').text(valueMoney);
 
 
 
+            setTimeout(() => {
+                $(this).closest('.messag-elem').next('.message-y').addClass('visF');
+            }, 300);
+
+            setTimeout(() => {
+                $('html,body').animate({ scrollTop: $(this).closest('.messag-elem').next('.message-y').offset().top + "px" }, { duration: 1E3 });
+            }, 400);
+
+            setTimeout(() => {
+                if ($('.text-print').length == 0) {
+                    $(this).closest('.messag-elem').next('.message-y').after('<div class="text-print text-money-check">Анастасия печатает ...</div>');
+                }
+            }, 600);
+
+            setTimeout(() => {
+                $(this).closest('.messag-elem').next('.message-y').next('.messag-elem').addClass('visF');
+                $('.text-money-check').remove();
+            }, 1500);
+
+            setTimeout(() => {
+                $(this).closest('.messag-elem').next('.message-y').next('.messag-elem').addClass('vis');
+
+            }, 1600);
+
+            // setTimeout(() => {
+            //     $('.js-final-message').addClass('visF');
+            // }, 1600);
+
+            // setTimeout(() => {
+            //     $('.js-final-message').addClass('vis');
+            //     $('.text-final').remove();
+            // }, 1700);
+
+
+
+        });
     });
-
 
 
 
