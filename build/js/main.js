@@ -75,12 +75,16 @@ $(function() {
         $('.js-problem-check-answear').removeClass('visF');
         $('.btns label').removeClass('active');
         var valueCar = $(this).children('input:checked').val();
-        $('.js-step-1').addClass('vis');
-        $('.js-step-1 .message-text').text(valueCar);
 
+        $('.js-step-1 .message-text').text(valueCar);
 
         setTimeout(() => {
             $('.js-step-1').addClass('visF');
+        }, 1);
+
+
+        setTimeout(() => {
+            $('.js-step-1').addClass('vis');
         }, 100);
 
         setTimeout(() => {
@@ -124,14 +128,19 @@ $(function() {
 
             var valueMoney = $(this).children('input:checked').val();
             console.log(valueMoney);
-            $(this).closest('.messag-elem').next('.message-y').addClass('vis');
             $(this).closest('.messag-elem').next('.message-y').find('.message-text').text(valueMoney);
-
 
 
             setTimeout(() => {
                 $(this).closest('.messag-elem').next('.message-y').addClass('visF');
-            }, 300);
+            }, 100);
+
+
+
+
+            setTimeout(() => {
+                $(this).closest('.messag-elem').next('.message-y').addClass('vis');
+            }, 200);
 
             setTimeout(() => {
                 $('html,body').animate({ scrollTop: $(this).closest('.messag-elem').next('.message-y').offset().top + "px" }, { duration: 1E3 });

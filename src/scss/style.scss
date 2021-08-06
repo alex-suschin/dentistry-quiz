@@ -346,6 +346,14 @@ header.header-show {
     -o-transform: translateX(-25px);
 }
 
+.message-item.message-y {
+    transform: translateX(25px);
+    -webkit-transform: translateX(25px);
+    -moz-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    -o-transform: translateX(25px);
+}
+
 .message-item.visF {
     display: flex;
 }
