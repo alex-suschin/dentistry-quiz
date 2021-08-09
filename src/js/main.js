@@ -65,7 +65,11 @@ $(function() {
         // var newmessBlockH = $('.message-box').outerHeight();
         // var messCarH = $('.js-step-1').outerHeight();
         // $(".message-box").css('height', newmessBlockH + messCarH);
+        var optVal = $(this).data('option');
 
+        $('.btns').hide();
+        $('.' + optVal).show();
+        console.log(optVal);
         flag = false;
         $('.js-problem-check').removeClass('vis');
         $('.js-problem-check').removeClass('visF');
@@ -109,6 +113,13 @@ $(function() {
         }, 1200);
 
 
+    });
+
+    $('.back-step').click(function(e) {
+        e.preventDefault();
+        $(this).closest('.message-item').removeClass('vis visF');
+        $(this).closest('.message-item').siblings('.message-y').removeClass('vis visF');
+        $(this).closest('.message-item~.message-item').removeClass('vis visF');
     });
 
     $('.services-item').click(function() {

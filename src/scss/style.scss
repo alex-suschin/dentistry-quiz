@@ -312,11 +312,9 @@ header.header-show {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    padding: 55px 52px 87px 52px;
+    padding: 55px 134px 87px 52px;
     background: #FFFFFF;
-    box-shadow: 0px 33px 50px rgba(0, 0, 0, 0.01);
-    border-radius: 28px;
-    margin-bottom: 39px;
+    box-shadow: 0px 33px 55px rgba(209, 227, 237, 0.33);
     transition: height 100ms ease, transform 700ms ease, opacity 700ms ease;
     background: rgba(255, 255, 255, 0.75);
     transform: translateY(300px) scale(0.9);
@@ -336,6 +334,7 @@ header.header-show {
     transform: translateX(-25px);
     display: flex;
     display: none;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 50px;
@@ -347,6 +346,8 @@ header.header-show {
 }
 
 .message-item.message-y {
+    max-width: 606px;
+    width: fit-content;
     transform: translateX(25px);
     -webkit-transform: translateX(25px);
     -moz-transform: translateX(25px);
@@ -558,19 +559,69 @@ header.header-show {
 }
 
 .form-request {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
     input {
-        max-width: 254px;
+        max-width: 192px;
         width: 100%;
+        padding: 0 15px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 100%;
+        align-items: center;
+        letter-spacing: 0.12em;
+        color: #364665;
+        margin-right: 20px;
     }
 }
 
 .agree {
+    position: relative;
     margin-top: 18px;
     font-weight: normal;
     font-size: 12px;
     line-height: 100%;
     color: #747474;
-    margin-bottom: 18px;
+    margin: 26px 0 18px 0;
+    padding: 0 0 0 25px;
+    input {
+        display: none;
+    }
+    label {
+        cursor: pointer;
+    }
+    span {
+        position: absolute;
+        left: 0;
+        top: -3px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: 1.4px solid #74DEE4;
+        box-sizing: border-box;
+        border-radius: 6px;
+        &::after {
+            content: '';
+            display: block;
+            background: url(../img/ok.svg) no-repeat center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 1px;
+            bottom: 0;
+            opacity: 0;
+            @include tr2;
+        }
+    }
+    b {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 100%;
+        color: #747474;
+    }
     a {
         font-weight: normal;
         font-size: 12px;
@@ -583,15 +634,21 @@ header.header-show {
     }
 }
 
+.agree label input:checked+span::after {
+    opacity: 1;
+}
+
 .butphone {
     display: block;
-    max-width: 254px;
+    max-width: 161px;
     width: 100%;
-    margin-top: 20px;
-    background: #4BA82E;
-    color: #fff;
-    font-family: inherit;
-    font-size: 17px;
+    background: #92EEF4;
+    box-shadow: 0px 4px 22px rgba(146, 238, 244, 0.63);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 132%;
+    text-align: center;
+    color: #364665;
     border-radius: 16px;
     padding: 16px 0 15px 0;
     border: 0;
@@ -639,6 +696,19 @@ header.header-show {
             margin-bottom: 0;
         }
     }
+}
+
+.back-step {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 0.5px solid #E4EDFF;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #364665;
+    padding: 17px 0 17px 26px;
+    background: url(../img/arrow.svg) no-repeat left center;
 }
 
 
@@ -710,6 +780,16 @@ header.header-show {
 }
 
 @media screen and (max-width: 735px) {
+    .logo-text b,
+    .logo-text span {
+        font-size: 12px;
+        line-height: 140%;
+    }
+    .logo img {
+        width: 30px;
+        height: 32px;
+        margin-right: 12px;
+    }
     .info-mobile {
         padding: 0 16px;
         margin-bottom: 16px;
@@ -731,9 +811,6 @@ header.header-show {
     }
     .content {
         padding: 15px 0 0 0;
-    }
-    header .logo-text {
-        display: none;
     }
     header .address-phone span {
         display: none;
@@ -796,9 +873,20 @@ header.header-show {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
     .form-request {
-        margin: 0 0 0 -54px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-request input {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .message-box {
+        padding: 30px 12px 50px 12px;
     }
     .btns {
         flex-direction: column;
@@ -814,18 +902,15 @@ header.header-show {
     header {
         padding: 20px 0;
     }
-    .logo img {
-        width: 156px;
-        height: 34px;
-        margin-right: 12px;
-    }
     .exs-item {
         width: 100%;
         text-align: left;
         justify-content: flex-start;
     }
     .content h1 {
-        font-size: 24px;
+        font-size: 20px;
+        line-height: 130%;
+        margin-bottom: 15px;
     }
     .exs-item__text {
         font-weight: bold;
@@ -846,6 +931,8 @@ header.header-show {
     .avatar {
         width: 40px;
         height: 40px;
+        margin-right: 0;
+        margin-bottom: 7px;
     }
     .avatar::after {
         bottom: 3px;
@@ -853,7 +940,7 @@ header.header-show {
     }
     .message-text {
         font-size: 14px;
-        padding: 16px 16px 16px 16px;
+        padding: 18px 20px 18px 20px;
     }
     .btns a {
         flex-shrink: 0;
@@ -861,11 +948,35 @@ header.header-show {
     }
     .form-request input {
         padding: 0 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .agree span::after {
+        left: 0;
     }
     .agree {
-        margin: 0 -39px;
         margin-bottom: 18px;
         margin-top: 18px;
+    }
+    .message-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .message-m .message-info {
+        width: 100%;
+        padding: 0;
+    }
+    .name {
+        margin-bottom: 7px;
+        font-weight: 500;
+    }
+    .services {
+        padding-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .services-item {
+        margin-right: 0;
     }
 }
 
