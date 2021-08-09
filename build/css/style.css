@@ -623,6 +623,9 @@ header.header-show {
       background: #fff;
       border-color: #92EEF4; }
 
+.btns-checked label {
+  pointer-events: none; }
+
 .btns input {
   display: none; }
 

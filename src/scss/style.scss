@@ -549,6 +549,10 @@ header.header-show {
     }
 }
 
+.btns-checked label {
+    pointer-events: none;
+}
+
 .btns input {
     display: none;
 }

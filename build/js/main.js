@@ -66,6 +66,8 @@ $(function() {
         // var messCarH = $('.js-step-1').outerHeight();
         // $(".message-box").css('height', newmessBlockH + messCarH);
         var optVal = $(this).data('option');
+        $('.message-m .message-text').hide();
+        $('.message-m .message-text' + '.' + optVal).show();
 
         $('.btns').hide();
         $('.' + optVal).show();
@@ -118,17 +120,22 @@ $(function() {
     $('.back-step').click(function(e) {
         e.preventDefault();
         $(this).closest('.message-item').removeClass('vis visF');
-        $(this).closest('.message-item').siblings('.message-y').removeClass('vis visF');
+        $(this).closest('.message-item').prev('.message-y').removeClass('vis visF');
+        $(this).closest('.message-item').prev('.message-y').prev('.message-item').find('.btns').removeClass('btns-checked');
         $(this).closest('.message-item~.message-item').removeClass('vis visF');
     });
 
     $('.services-item').click(function() {
         $('.services-item').removeClass('active');
         $(this).addClass('active');
+        // $('.message-text').hide();
+        // $('.message-text' + '.' + optVal).show();
+
     });
 
     $('.btns').each(function() {
         $(this).children('label').click(function() {
+            $(this).parents('.btns').addClass('btns-checked');
             var elemThis = $(this).closest('.message-item-m');
             var idVal = $(this).closest('.message-item-m').attr('id');
             console.log(idVal);
