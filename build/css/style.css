@@ -368,6 +368,7 @@ header.header-show {
   position: relative; }
 
 .message-item {
+  width: 100%;
   opacity: 0;
   visibility: hidden;
   transform: translateX(-25px);

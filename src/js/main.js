@@ -158,6 +158,8 @@ $(function() {
             $(this).siblings('label').removeClass('active');
             $(this).addClass('active');
 
+            var NextEl = $(this).closest('.message-item').next('.message-item').next('.message-item').length;
+
             var valueMoney = $(this).children('input:checked').val();
             // console.log(valueMoney);
             $(this).closest('.messag-elem').next('.message-y').find('.message-text').text(valueMoney);
@@ -179,7 +181,7 @@ $(function() {
             }, 400);
 
             setTimeout(() => {
-                if ($('.text-print').length == 0) {
+                if ($('.text-print').length == 0 && NextEl != 0) {
                     $(this).closest('.messag-elem').next('.message-y').after('<div class="text-print text-money-check">Анастасия печатает ...</div>');
                 }
             }, 600);
@@ -187,12 +189,42 @@ $(function() {
             setTimeout(() => {
                 $(this).closest('.messag-elem').next('.message-y').next('.messag-elem').addClass('visF');
                 $('.text-money-check').remove();
+
             }, 1500);
+
+
 
             setTimeout(() => {
                 $(this).closest('.messag-elem').next('.message-y').next('.messag-elem').addClass('vis');
 
             }, 1600);
+
+
+
+
+
+
+            // console.log(NextEl);
+            if (NextEl == 0) {
+                setTimeout(() => {
+                    if ($('.text-final').length == 0) {
+                        $('.js-final-message').before('<div class="text-print text-final">Анастасия печатает ...</div>');
+                    }
+                }, 400);
+
+                setTimeout(() => {
+                    $('.js-final-message').addClass('visF');
+                    $('.text-final').remove();
+                }, 1500);
+
+                setTimeout(() => {
+                    $('.js-final-message').addClass('vis');
+                }, 1600);
+
+
+            }
+
+
 
             // setTimeout(() => {
             //     $('.js-final-message').addClass('visF');

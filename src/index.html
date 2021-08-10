@@ -56,7 +56,7 @@
             <div class="container">
                 <h1>Стоматологическая помощь возле вашего дома. Поможем даже в экстренных случаях</h1>
 
-                <div class="message-box">
+                <form method="post" action="/" class="message-box">
                     <div class="message-item message-m" data-delay-text="200" data-delay="1500">
                         <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                         <div class="message-info">
@@ -260,7 +260,7 @@
                             <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                             <div class="message-info">
                                 <div class="name">Анастасия</div>
-                                <div class="message-text">Какие зубы необходимо восстановить?</div>
+                                <div class="message-text">Каким способом восстановим зубы?</div>
                                 <div class="btns btns-var-tooth">
                                     <label>
                                         <input type="radio" name="type-treatment" value="Имплантация зубов">
@@ -362,28 +362,7 @@
                             </div>
                         </div>
 
-                        <div class="message-item messag-elem message-m js-final-message">
-                            <div class="avatar"><img src="img/manager.jpg" alt=""></div>
-                            <div class="message-info">
-                                <div class="name">Анастасия</div>
-                                <div class="message-text">Почти готово! Расчет уже готовят наши врачи. Впишите свой телефон,<br> на который направить его по whatsapp / viber / смс / по телефону.</div>
 
-                                <form action="/" method="post" class="form-request">
-                                    <input type="tel" required class="inpphone" placeholder="+7   ___-___-__-__">
-                                    <button type="submit" class="butphone">Отправить</button>
-                                    <div class="error errorphone" style="display: none;"></div>
-                                    <div class="agree">
-                                        <label>
-                                            <input required type="checkbox">
-                                            <span></span>
-                                            <b>Согласен с <a href="#">политикой конфиденциальности</a></b>
-                                        </label>
-                                        </a>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
                     </div>
 
                     <div class="services-elem" id="opt-2" style="display: none;">
@@ -452,7 +431,7 @@
                             <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                             <div class="message-info">
                                 <div class="name">Анастасия</div>
-                                <div class="message-text">Сколько зубов вы хотите восстановить? 2</div>
+                                <div class="message-text">Сколько зубов вы хотите восстановить?</div>
                                 <div class="btns">
                                     <label>
                                         <input type="radio" name="tooth-col" value="1">
@@ -558,7 +537,7 @@
                             <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                             <div class="message-info">
                                 <div class="name">Анастасия</div>
-                                <div class="message-text">Какие зубы необходимо восстановить?</div>
+                                <div class="message-text">Каким способом восстановим зубы?</div>
                                 <div class="btns btns-var-tooth">
                                     <label>
                                         <input type="radio" name="type-treatment" value="Имплантация зубов">
@@ -660,13 +639,13 @@
                             </div>
                         </div>
 
-                        <div class="message-item messag-elem message-m js-final-message">
+                        <!-- <div class="message-item messag-elem message-m js-final-message">
                             <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                             <div class="message-info">
                                 <div class="name">Анастасия</div>
                                 <div class="message-text">Почти готово! Расчет уже готовят наши врачи. Впишите свой телефон,<br> на который направить его по whatsapp / viber / смс / по телефону.</div>
 
-                                <form action="/" method="post" class="form-request">
+                                <div class="form-request">
                                     <input type="tel" required class="inpphone" placeholder="+7   ___-___-__-__">
                                     <button type="submit" class="butphone">Отправить</button>
                                     <div class="error errorphone" style="display: none;"></div>
@@ -678,9 +657,9 @@
                                         </label>
                                         </a>
                                     </div>
-                                </form>
+                                </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
 
@@ -696,7 +675,7 @@
                             <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                             <div class="message-info">
                                 <div class="name">Анастасия</div>
-                                <div class="message-text">Сколько зубов вы хотите восстановить? 3</div>
+                                <div class="message-text">Сколько зубов вы хотите удалить?</div>
                                 <div class="btns">
                                     <label>
                                         <input type="radio" name="tooth-col" value="1">
@@ -719,32 +698,8 @@
                                         <span>5</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="tooth-col" value="6">
-                                        <span>6</span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="tooth-col" value="7">
-                                        <span>7</span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="tooth-col" value="8">
-                                        <span>8</span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="tooth-col" value="9">
-                                        <span>9</span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="tooth-col" value="Более 10">
-                                        <span>Более 10</span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="tooth-col" value="Всю челюсть">
-                                        <span>Всю челюсть</span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="tooth-col" value="Обе челюсти">
-                                        <span>Обе челюсти</span>
+                                        <input type="radio" name="tooth-col" value="6 и более">
+                                        <span>6 и более</span>
                                     </label>
                                 </div>
                             </div>
@@ -762,27 +717,34 @@
                             <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                             <div class="message-info">
                                 <div class="name">Анастасия</div>
-                                <div class="message-text">Какие зубы необходимо восстановить?</div>
+                                <div class="message-text">Рассматриваете только удаление или хотели бы сохранить зуб?</div>
                                 <div class="btns btns-var-tooth">
                                     <label>
-                                        <input type="radio" name="tooth-var" value="Передние - В этом случае люди предпочитают более эстетичные материалы: диоксид циркония и коронки цельнокерамические">
+                                        <input type="radio" name="tooth-var-delete" value="Хотелось бы сохранить">
                                         <span>
-                                            <b>Передние</b>
-                                            <p>В этом случае люди предпочитают более эстетичные материалы: диоксид циркония и коронки цельнокерамические</p>
+                                            <b>Хотелось бы сохранить</b>
+                                            <p>Зачастую мы спасаем зубы, которые в других клиниках рекомендуют удалять. Благодаря лечению под увеличением с помощью микроскопа/бинокуляров и технологиям восстановления с помощью вкладки, коронки и др.</p>
                                         </span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="tooth-var" value="Жевательные - Могут быть использованы все варианты протезирования, в том числе металлокерамика">
+                                        <input type="radio" name="tooth-var-delete" value="Только удаление для имплантации">
                                         <span>
-                                            <b>Жевательные</b>
-                                            <p>Могут быть использованы все варианты протезирования, в том числе металлокерамика</p>
+                                            <b>Только удаление для имплантации</b>
+                                            <p>Делайте удаление у того же доктора, который будет делать имплантацию. Тогда для имплантации может не потребоваться операция костной пластики</p>
                                         </span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="tooth-var" value="И то, и другое - Материалы в этом случае важно подбирать при консультации с доктором">
+                                        <input type="radio" name="tooth-var-delete" value="Удаление зубов мудрости">
                                         <span>
-                                            <b>И то, и другое</b>
-                                            <p>Материалы в этом случае важно подбирать при консультации с доктором</p>
+                                            <b>Удаление зубов мудрости</b>
+                                            <p>Для ортодонтического лечения брекетами/элайнерами либо потому, что зуб мудрости начал болеть</p>
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="tooth-var-delete" value="Только удаление. Нет денег или времени на лечение">
+                                        <span>
+                                            <b>Только удаление. Нет денег или времени на лечение</b>
+                                            <p>Рекомендуем всё же сохранять зуб. А если не хватает бюджета, воспользуйтесь рассрочкой. Это поможет избежать выпадения/потери соседних зубов</p>
                                         </span>
                                     </label>
                                 </div>
@@ -802,48 +764,34 @@
                             <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                             <div class="message-info">
                                 <div class="name">Анастасия</div>
-                                <div class="message-text">Какие зубы необходимо восстановить?</div>
+                                <div class="message-text">Хотели бы сразу вставить новый зуб вместо удаленного?</div>
                                 <div class="btns btns-var-tooth">
                                     <label>
-                                        <input type="radio" name="type-treatment" value="Имплантация зубов">
+                                        <input type="radio" name="type-treatment" value="Да, сразу в день приема">
                                         <span>
-                                            <b>Имплантация зубов</b>
-                                            <p>Наиболее современный и надежный способ восстановления зубов, проверенный временем, при котором не обтачиваются соседние зубы</p>
+                                            <b>Да, сразу в день приема</b>
+                                            <p>В 1 день одним доктором проводится удаление и сразу устанавливается имплантат с коронкой</p>
                                         </span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="type-treatment" value="Одномоментная имплантация">
+                                        <input type="radio" name="type-treatment" value="Да, в ближайшие месяцы">
                                         <span>
-                                            <b>Одномоментная имплантация</b>
-                                            <p>Позволяет в одно посещение восстановить отсутствующий зуб. Позволяет произвести удаление зуба и сразу сделать имплантацию в один визит</p>
+                                            <b>Да, в ближайшие месяцы</b>
+                                            <p>Помните, что каждый месяц откладывания может вести к увеличению стоимости из-за смещения зубов, рядом с отсутствующим</p>
                                         </span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="type-treatment" value="All-on-4/All-on-6">
+                                        <input type="radio" name="type-treatment" value="Нет, так как нет бюджета">
                                         <span>
-                                            <b>All-on-4/All-on-6</b>
-                                            <p>Оптимальный способ восстановления, когда требуется восстановление зубов на всей челюсти. Для этого вместо 10-14 имплантатов достаточно всего 4-6</p>
+                                            <b>Нет, так как нет бюджета</b>
+                                            <p>Помните, что отсутствие зуба со временем может привести к расшатыванию и потере соседних зубов. Рассмотрите вариант с рассрочкой на имплантацию, чтобы восстановить зуб. В любом случае, выбор за вами</p>
                                         </span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="type-treatment" value="Мост">
+                                        <input type="radio" name="type-treatment" value="Нет, по другим причинам">
                                         <span>
-                                            <b>Мост</b>
-                                            <p>Более дешевый способ, который широко применялся в 90-е годы, при котором обтачиваются соседние зубы</p>
-                                        </span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="type-treatment" value="Съемный протез">
-                                        <span>
-                                            <b>Съемный протез</b>
-                                            <p>Самый бюджетный и не очень комфортный вариант. Возможны трудности при пережевывании твердой пищи. Однако гораздо лучше, чем отсутствие зубов</p>
-                                        </span>
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="type-treatment" value="Консультация">
-                                        <span>
-                                            <b>Консультация</b>
-                                            <p>Предпочитаю посоветоваться с доктором и подробнее узнать о каждом варианте перед выбором</p>
+                                            <b>Нет, по другим причинам</b>
+                                            <p>В случае удаления зубов мудрости / для ортодонтического лечения брекетами / по рекомендации врача и др.</p>
                                         </span>
                                     </label>
                                 </div>
@@ -904,13 +852,13 @@
                             </div>
                         </div>
 
-                        <div class="message-item messag-elem message-m js-final-message">
+                        <!-- <div class="message-item messag-elem message-m js-final-message">
                             <div class="avatar"><img src="img/manager.jpg" alt=""></div>
                             <div class="message-info">
                                 <div class="name">Анастасия</div>
                                 <div class="message-text">Почти готово! Расчет уже готовят наши врачи. Впишите свой телефон,<br> на который направить его по whatsapp / viber / смс / по телефону.</div>
 
-                                <form action="/" method="post" class="form-request">
+                                <div class="form-request">
                                     <input type="tel" required class="inpphone" placeholder="+7   ___-___-__-__">
                                     <button type="submit" class="butphone">Отправить</button>
                                     <div class="error errorphone" style="display: none;"></div>
@@ -922,9 +870,9 @@
                                         </label>
                                         </a>
                                     </div>
-                                </form>
+                                </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
 
@@ -933,8 +881,30 @@
 
 
 
+                    <div class="message-item messag-elem message-m js-final-message">
+                        <div class="avatar"><img src="img/manager.jpg" alt=""></div>
+                        <div class="message-info">
+                            <div class="name">Анастасия</div>
+                            <div class="message-text">Почти готово! Расчет уже готовят наши врачи. Впишите свой телефон,<br> на который направить его по whatsapp / viber / смс / по телефону.</div>
 
-                </div>
+                            <div class="form-request">
+                                <input type="tel" required class="inpphone" placeholder="+7   ___-___-__-__">
+                                <button type="submit" class="butphone">Отправить</button>
+                                <div class="error errorphone" style="display: none;"></div>
+                                <div class="agree">
+                                    <label>
+                                        <input required type="checkbox">
+                                        <span></span>
+                                        <b>Согласен с <a href="#">политикой конфиденциальности</a></b>
+                                    </label>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
             </div>
         </div>
 
