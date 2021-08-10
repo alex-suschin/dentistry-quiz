@@ -66,53 +66,62 @@ $(function() {
         // var messCarH = $('.js-step-1').outerHeight();
         // $(".message-box").css('height', newmessBlockH + messCarH);
         var optVal = $(this).data('option');
-        $('.message-m .message-text').hide();
-        $('.message-m .message-text' + '.' + optVal).show();
+        // $('.message-m .message-text').hide();
+        // $('.message-m .message-text' + '.' + optVal).show();
 
-        $('.btns').hide();
-        $('.' + optVal).show();
-        console.log(optVal);
+        $('.services-elem').hide();
+        $('#' + optVal).show();
+        // console.log(optVal);
         flag = false;
-        $('.js-problem-check').removeClass('vis');
-        $('.js-problem-check').removeClass('visF');
-        $('.js-final-message').removeClass('vis');
-        $('.js-final-message').removeClass('visF');
-        $('.js-problem-check-answear').removeClass('vis');
-        $('.js-problem-check-answear').removeClass('visF');
+        $('#' + optVal).children('.js-step-1').removeClass('visF');
+        $('#' + optVal).children('.js-step-1').removeClass('vis');
+        $('#' + optVal).find('.js-step-1').next('.message-m').removeClass('vis');
+        $('#' + optVal).find('.js-step-1').next('.message-m').removeClass('visF');
+        // $('.js-problem-check').removeClass('vis');
+        // $('.js-problem-check').removeClass('visF');
+        // $('.js-final-message').removeClass('vis');
+        // $('.js-final-message').removeClass('visF');
+        // $('.js-problem-check-answear').removeClass('vis');
+        // $('.js-problem-check-answear').removeClass('visF');
         $('.btns label').removeClass('active');
-        var valueCar = $(this).children('input:checked').val();
+        var valueServ = $(this).children('input:checked').val();
 
-        $('.js-step-1 .message-text').text(valueCar);
+        $('#' + optVal).children('.js-step-1').find('.message-text').text(valueServ);
 
         setTimeout(() => {
-            $('.js-step-1').addClass('visF');
+            $('#' + optVal).children('.js-step-1').addClass('visF');
         }, 1);
 
 
         setTimeout(() => {
-            $('.js-step-1').addClass('vis');
+            $('#' + optVal).children('.js-step-1').addClass('vis');
         }, 100);
 
         setTimeout(() => {
-            $('html,body').animate({ scrollTop: $('.js-step-1').offset().top + "px" }, { duration: 1E3 });
+            $('html,body').animate({ scrollTop: $('#' + optVal).children('.js-step-1').offset().top + "px" }, { duration: 1E3 });
         }, 150);
 
 
 
         setTimeout(() => {
             if ($('.text-print').length == 0) {
-                $('.js-step-1').after('<div class="text-print text-car-check">Виктор печатает ...</div>');
+                $('#' + optVal).children('.js-step-1').after('<div class="text-print text-car-check">Анастасия печатает ...</div>');
             }
         }, 200);
 
         setTimeout(() => {
-            $('.js-problem-check').addClass('visF');
-        }, 300);
-
-        setTimeout(() => {
-            $('.js-problem-check').addClass('vis');
             $('.text-car-check').remove();
         }, 1200);
+
+        setTimeout(() => {
+            $('#' + optVal).find('.js-step-1').next('.message-m').addClass('visF');
+        }, 1200);
+
+        setTimeout(() => {
+            $('#' + optVal).find('.js-step-1').next('.message-m').addClass('vis');
+        }, 1300);
+
+
 
 
     });
@@ -121,8 +130,13 @@ $(function() {
         e.preventDefault();
         $(this).closest('.message-item').removeClass('vis visF');
         $(this).closest('.message-item').prev('.message-y').removeClass('vis visF');
+        $(this).closest('.message-item').next('.message-y').removeClass('vis visF');
         $(this).closest('.message-item').prev('.message-y').prev('.message-item').find('.btns').removeClass('btns-checked');
+        $(this).closest('.message-item').prev('.message-y').prev('.message-item').find('.btns label').removeClass('active');
+        $(this).siblings('.message-info').find('.btns').removeClass('btns-checked');
+        $(this).siblings('.message-info').find('.btns').children('label').removeClass('active');
         $(this).closest('.message-item~.message-item').removeClass('vis visF');
+        $('.js-final-message').removeClass('vis visF');
     });
 
     $('.services-item').click(function() {
@@ -138,14 +152,14 @@ $(function() {
             $(this).parents('.btns').addClass('btns-checked');
             var elemThis = $(this).closest('.message-item-m');
             var idVal = $(this).closest('.message-item-m').attr('id');
-            console.log(idVal);
+            // console.log(idVal);
             $('.js-final-message').removeClass('vis');
             $('.js-final-message').removeClass('visF');
             $(this).siblings('label').removeClass('active');
             $(this).addClass('active');
 
             var valueMoney = $(this).children('input:checked').val();
-            console.log(valueMoney);
+            // console.log(valueMoney);
             $(this).closest('.messag-elem').next('.message-y').find('.message-text').text(valueMoney);
 
 

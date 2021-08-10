@@ -16,17 +16,17 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-SemiBold.eot");
-  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.eot");
-  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/Montserrat-SemiBold.eot");
+  src: url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
@@ -467,7 +467,9 @@ header.header-show {
   margin-bottom: 6px; }
 
 .message-info {
-  padding: 15px 0 0 0; }
+  padding: 15px 0 0 0;
+  max-width: 686px;
+  width: 100%; }
 
 .message-text {
   width: -webkit-fit-content;
@@ -643,6 +645,8 @@ header.header-show {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 20px; }
   .form-request input {
     max-width: 192px;
@@ -659,6 +663,7 @@ header.header-show {
     margin-right: 20px; }
 
 .agree {
+  width: 100%;
   position: relative;
   margin-top: 18px;
   font-weight: normal;
@@ -668,7 +673,12 @@ header.header-show {
   margin: 26px 0 18px 0;
   padding: 0 0 0 25px; }
   .agree input {
-    display: none; }
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 16px;
+    left: 7.5px; }
   .agree label {
     cursor: pointer; }
   .agree span {
@@ -771,7 +781,9 @@ header.header-show {
 
 .back-step {
   display: block;
+  max-width: 686px;
   width: 100%;
+  margin-left: 88px;
   margin-top: 20px;
   border-top: 0.5px solid #E4EDFF;
   font-weight: 500;
@@ -780,6 +792,16 @@ header.header-show {
   color: #364665;
   padding: 17px 0 17px 26px;
   background: url(../img/arrow.svg) no-repeat left center; }
+
+.services-elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%; }
 
 /* 
     M O B I L E
@@ -794,13 +816,38 @@ header.header-show {
     outline: none; } }
 
 @media screen and (max-width: 986px) {
+  .back-step {
+    margin-left: 0;
+    max-width: 100%;
+    width: 90%; }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    margin-bottom: 7px; }
+  .name {
+    margin-bottom: 7px;
+    font-weight: 500; }
   .content h1 {
     font-size: 32px; }
   .exs-item__text {
     font-size: 12px; }
   .avatar {
     -ms-flex-negative: 0;
-        flex-shrink: 0; } }
+        flex-shrink: 0; }
+  .message-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .message-m .message-info {
+    width: 100%;
+    padding: 0; }
+  .message-m .message-info {
+    width: 100%; } }
 
 @media screen and (max-width: 930px) {
   .cars {
@@ -943,21 +990,15 @@ header.header-show {
     margin-bottom: 20px; } }
 
 @media screen and (max-width: 500px) {
+  .butphone {
+    max-width: 100%; }
+  .agree b {
+    width: 100%;
+    font-size: 10px; }
+  .agree a {
+    font-size: 10px; }
   .message-box {
     padding: 30px 12px 50px 12px; }
-  .btns {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
-  .btns label:first-child {
-    margin-right: 0;
-    margin-bottom: 20px; }
-  .message-m .message-info {
-    width: 74%; }
   header {
     padding: 20px 0; }
   .exs-item {
@@ -982,11 +1023,6 @@ header.header-show {
     margin-bottom: 10px; }
   .head-title span {
     font-size: 12px; }
-  .avatar {
-    width: 40px;
-    height: 40px;
-    margin-right: 0;
-    margin-bottom: 7px; }
   .avatar::after {
     bottom: 3px;
     right: 0px; }
@@ -1001,25 +1037,15 @@ header.header-show {
     padding: 0 15px;
     width: 100%;
     max-width: 100%; }
+  .form-request .agree input {
+    padding: 0;
+    max-width: 1px;
+    width: 1px; }
   .agree span::after {
     left: 0; }
   .agree {
     margin-bottom: 18px;
     margin-top: 18px; }
-  .message-item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
-  .message-m .message-info {
-    width: 100%;
-    padding: 0; }
-  .name {
-    margin-bottom: 7px;
-    font-weight: 500; }
   .services {
     padding-left: 0;
     -webkit-box-orient: vertical;
