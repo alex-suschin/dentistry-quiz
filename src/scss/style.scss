@@ -689,9 +689,9 @@ header.header-show {
     margin-bottom: 20px;
 }
 
-.btns-var-tooth {
+.btns {
     label {
-        margin-right: 0;
+        margin-right: 10px;
         margin-bottom: 10px;
     }
     span {
@@ -725,6 +725,10 @@ header.header-show {
     color: #364665;
     padding: 17px 0 17px 26px;
     background: url(../img/arrow.svg) no-repeat left center;
+}
+
+.back-step-dis {
+    pointer-events: none;
 }
 
 .services-elem {

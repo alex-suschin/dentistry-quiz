@@ -107,7 +107,7 @@ $(function() {
             if ($('.text-print').length == 0) {
                 $('#' + optVal).children('.js-step-1').after('<div class="text-print text-car-check">Анастасия печатает ...</div>');
             }
-        }, 200);
+        }, 350);
 
         setTimeout(() => {
             $('.text-car-check').remove();
@@ -127,16 +127,33 @@ $(function() {
     });
 
     $('.back-step').click(function(e) {
+        setTimeout(() => {
+            $('html,body').animate({ scrollTop: $(this).closest('.message-item').prev('.message-y').prev('.message-item').offset().top + "px" }, { duration: 300 });
+        }, 150);
         e.preventDefault();
-        $(this).closest('.message-item').removeClass('vis visF');
-        $(this).closest('.message-item').prev('.message-y').removeClass('vis visF');
-        $(this).closest('.message-item').next('.message-y').removeClass('vis visF');
+        setTimeout(() => {
+            $(this).closest('.message-item').removeClass('vis');
+            $(this).closest('.message-item').prev('.message-y').removeClass('vis');
+            $(this).closest('.message-item').next('.message-y').removeClass('vis');
+            $(this).closest('.message-item~.message-item').removeClass('vis');
+        }, 250);
+        setTimeout(() => {
+            $(this).closest('.message-item').removeClass('visF');
+            $(this).closest('.message-item').prev('.message-y').removeClass('visF');
+            $(this).closest('.message-item').next('.message-y').removeClass('visF');
+            $(this).closest('.message-item~.message-item').removeClass('visF');
+        }, 350);
+        // $(this).closest('.message-item').removeClass('vis visF');
+        // $(this).closest('.message-item').prev('.message-y').removeClass('vis visF');
+        // $(this).closest('.message-item').next('.message-y').removeClass('vis visF');
         $(this).closest('.message-item').prev('.message-y').prev('.message-item').find('.btns').removeClass('btns-checked');
+        $(this).closest('.message-item').prev('.message-y').prev('.message-item').children('.back-step').removeClass('back-step-dis');
         $(this).closest('.message-item').prev('.message-y').prev('.message-item').find('.btns label').removeClass('active');
         $(this).siblings('.message-info').find('.btns').removeClass('btns-checked');
         $(this).siblings('.message-info').find('.btns').children('label').removeClass('active');
-        $(this).closest('.message-item~.message-item').removeClass('vis visF');
+        // $(this).closest('.message-item~.message-item').removeClass('vis visF');
         $('.js-final-message').removeClass('vis visF');
+
     });
 
     $('.services-item').click(function() {
@@ -150,6 +167,7 @@ $(function() {
     $('.btns').each(function() {
         $(this).children('label').click(function() {
             $(this).parents('.btns').addClass('btns-checked');
+            $(this).closest('.message-item').children('.back-step').addClass('back-step-dis');
             var elemThis = $(this).closest('.message-item-m');
             var idVal = $(this).closest('.message-item-m').attr('id');
             // console.log(idVal);
