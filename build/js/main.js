@@ -72,6 +72,7 @@ $(function() {
         $('.services-elem').hide();
         $('#' + optVal).show();
         // console.log(optVal);
+        $('.js-final-message').removeClass('vis visF');
         flag = false;
         $('#' + optVal).children('.js-step-1').removeClass('visF');
         $('#' + optVal).children('.js-step-1').removeClass('vis');
